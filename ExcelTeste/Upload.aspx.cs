@@ -56,8 +56,8 @@ public partial class Upload : System.Web.UI.Page
                 });
 
                 String PrimeiraColuna = result.Tables[0].Rows[0]["Loja"].ToString();
-                String SegundaColuna = result.Tables[0].Rows[1]["Tipo_de_gasto"].ToString();
-                String TerceiraColuna = result.Tables[0].Rows[2]["Valor"].ToString();
+                String SegundaColuna = result.Tables[0].Rows[0]["Tipo_de_gasto"].ToString();
+                String TerceiraColuna = result.Tables[0].Rows[0]["Valor"].ToString();
 
                 TextBox1.Text = PrimeiraColuna;
                 TextBox2.Text = SegundaColuna;
