@@ -22,25 +22,45 @@
             <asp:TextBox ID="txbTamanho" runat="server"></asp:TextBox>
             <p>
             </p>
-            <asp:Label ID="Label4" runat="server" Text="Primeira Coluna"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text="Primeira Coluna, primeira célula: "></asp:Label>
             <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            <asp:Label ID="Label6" runat="server" Text="Segunda Coluna"></asp:Label>
+            <asp:Label ID="Label6" runat="server" Text="Segunda Coluna, primeira célula: "></asp:Label>
             <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-            <asp:Label ID="Label7" runat="server" Text="Terceira Coluna"></asp:Label>
+            <asp:Label ID="Label7" runat="server" Text="Terceira Coluna, primeira célula: "></asp:Label>
             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
 
+                           
             <asp:GridView
                 ID="GridView1"
                 runat="server"
                 AutoGenerateColumns="false">
                 <Columns>
-                    <asp:BoundField DataField="Loja" HeaderText="Loja" SortExpression="Loja"/>
-                    <asp:BoundField DataField="Tipo_de_gasto" HeaderText="Tipo_de_gasto" SortExpression="Tipo_de_gasto"/>
-                    <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor"/>
-                
+                    <asp:BoundField DataField="Loja" HeaderText="Loja" SortExpression="Loja" />
+                    <asp:BoundField DataField="Tipo_de_gasto" HeaderText="Tipo_de_gasto" SortExpression="Tipo_de_gasto" />
+                    <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" />
                 </Columns>
-
             </asp:GridView>
+             <asp:Label ID="Label8" runat="server" Text=""></asp:Label>
+            <asp:GridView
+                ID="GridView2"
+                runat="server"
+                AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="Loja" HeaderText="Loja" SortExpression="Loja" />
+                    <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" />
+                </Columns>
+            </asp:GridView>
+            
+            <asp:GridView
+                ID="GridView3"
+                runat="server"
+                AutoGenerateColumns="false">
+                <Columns>
+                    <asp:BoundField DataField="Tipo_de_gasto" HeaderText="Tipo_de_gasto" SortExpression="Tipo_de_gasto" />
+                    <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" />
+                </Columns>
+            </asp:GridView>
+           
 
             <p>
                 <asp:Button ID="btEnviar" runat="server" OnClick="Button1_Click" Text="Enviar Arquivo" Width="146px" />

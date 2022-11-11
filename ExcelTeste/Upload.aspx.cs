@@ -78,6 +78,31 @@ public partial class Upload : System.Web.UI.Page
 
                 GridView1.DataSource = exceltable;
                 GridView1.DataBind();
+                                
+                List<ExcelLine> filtroexcel = exceltable
+
+                    .GroupBy(l => l.Loja)
+                    .Select(a => new ExcelLine 
+                        { 
+                            Loja = a.Select(c => c.Loja).FirstOrDefault(), 
+                            Valor = a.Sum(b => b.Valor)
+                         }).ToList();
+
+                List<ExcelLine> filtroteste = exceltable
+
+                    .GroupBy(l => l.Tipo_de_gasto)
+                    .Select(a => new ExcelLine
+                    {
+                        Tipo_de_gasto = a.Select(c => c.Tipo_de_gasto).FirstOrDefault(),
+                        Valor = a.Sum(b => b.Valor)
+                    }).ToList();
+
+                GridView2.DataSource = filtroexcel;
+                GridView2.DataBind();
+
+                GridView3.DataSource = filtroteste;
+                GridView3.DataBind();
+
 
             }
         }
