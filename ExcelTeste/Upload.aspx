@@ -36,7 +36,7 @@
                 AutoGenerateColumns="false">
                 <Columns>
                     <asp:BoundField DataField="Loja" HeaderText="Loja" SortExpression="Loja" />
-                    <asp:BoundField DataField="Tipo_de_gasto" HeaderText="Tipo_de_gasto" SortExpression="Tipo_de_gasto" />
+                    <asp:BoundField DataField="Tipo_de_gasto" HeaderText="Tipo de gasto" SortExpression="Tipo_de_gasto" />
                     <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" />
                 </Columns>
             </asp:GridView>
@@ -56,7 +56,7 @@
                 runat="server"
                 AutoGenerateColumns="false">
                 <Columns>
-                    <asp:BoundField DataField="Tipo_de_gasto" HeaderText="Tipo_de_gasto" SortExpression="Tipo_de_gasto" />
+                    <asp:BoundField DataField="Tipo_de_gasto" HeaderText="Tipo de gasto" SortExpression="Tipo_de_gasto" />
                     <asp:BoundField DataField="Valor" HeaderText="Valor" SortExpression="Valor" />
                 </Columns>
             </asp:GridView>
